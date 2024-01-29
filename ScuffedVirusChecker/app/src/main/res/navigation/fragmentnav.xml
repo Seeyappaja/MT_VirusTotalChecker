@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentnav"
+    app:startDestination="@id/initfragment">
+
+    <fragment
+        android:id="@+id/initfragment"
+        android:name="com.utb.scuffedviruschecker.Initfragment"
+        android:label="fragment_initfragment"
+        tools:layout="@layout/fragment_initfragment" >
+        <action
+            android:id="@+id/action_initfragment_to_fileChecker"
+            app:destination="@id/fileChecker" />
+        <action
+            android:id="@+id/action_initfragment_to_virusTotalCheck"
+            app:destination="@id/virusTotalCheck" />
+    </fragment>
+    <fragment
+        android:id="@+id/fileChecker"
+        android:name="com.utb.scuffedviruschecker.FileChecker"
+        android:label="fragment_file_checker"
+        tools:layout="@layout/fragment_file_checker" >
+        <action
+            android:id="@+id/action_fileChecker_to_initfragment"
+            app:destination="@id/initfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/virusTotalCheck"
+        android:name="com.utb.scuffedviruschecker.VirusTotalCheck"
+        android:label="fragment_virus_total_check"
+        tools:layout="@layout/fragment_virus_total_check" >
+        <action
+            android:id="@+id/action_virusTotalCheck_to_initfragment"
+            app:destination="@id/initfragment" />
+    </fragment>
+</navigation>
