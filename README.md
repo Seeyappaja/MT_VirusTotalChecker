@@ -1,2 +1,6 @@
 # MT_VirusTotalChecker
 MT_VirusTotalChecker
+
+KNOWN ISSUES
+Random crashed...
+Virus total apparently having broken GET request for your finished file...
