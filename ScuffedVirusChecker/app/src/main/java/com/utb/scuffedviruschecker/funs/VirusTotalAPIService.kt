@@ -16,7 +16,7 @@ interface VirusTotalApiService {
 
     @Headers(
         "accept: application/json",
-        "x-apikey: 747aa19cdc005173c8a99f6e8479db36a3b7fe468b460bb03d3bad390c0d2107"
+        "x-apikey: "
     )
     @Multipart
     @POST("files")
@@ -27,7 +27,7 @@ interface VirusTotalApiService {
 
 interface GetFileinformation {
 
-    @Headers("x-apikey: 747aa19cdc005173c8a99f6e8479db36a3b7fe468b460bb03d3bad390c0d2107")
+    @Headers("x-apikey: ")
     @GET("files/{id}")
     suspend fun getFileInformation(@Path("id") fileId: String): Response<GetResults>
 }
