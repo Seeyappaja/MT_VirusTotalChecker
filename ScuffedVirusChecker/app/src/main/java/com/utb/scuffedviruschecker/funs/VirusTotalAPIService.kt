@@ -1,7 +1,7 @@
 package com.utb.scuffedviruschecker.funs
 
 
-import com.utb.scuffedviruschecker.model.GetResults
+import com.utb.scuffedviruschecker.model.GetFileInformation
 import com.utb.scuffedviruschecker.model.ScanResult
 import okhttp3.MultipartBody
 import retrofit2.Response
@@ -16,7 +16,7 @@ interface VirusTotalApiService {
 
     @Headers(
         "accept: application/json",
-        "x-apikey: "
+        "x-apikey: REDACTED"
     )
     @Multipart
     @POST("files")
@@ -27,7 +27,7 @@ interface VirusTotalApiService {
 
 interface GetFileinformation {
 
-    @Headers("x-apikey: ")
+    @Headers("x-apikey: REDACTED")
     @GET("files/{id}")
-    suspend fun getFileInformation(@Path("id") fileId: String): Response<GetResults>
+    suspend fun getFileInformation(@Path("id") fileId: String): Response<GetFileInformation>
 }
